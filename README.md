@@ -1,11 +1,17 @@
-Réalisation du Projet 2 ( Open class rooms) => PARTIE 2
+Réalisation du Projet 2 ( Open class rooms) => PARTIE 3
 
-Partie HTML :
-Modification du document 
-Ajout de classes HTML 
-Validation du cdocument HTML avec le validateur HTML sur w3.org
+Ajustement du document HTML 
+Ajustement de Style CSS 
 
-Ajout d'un fichier CSS
-Realisation du style version desktop du site Réservia 
+Ajout du format tablette du site 
+Ajout du format téléphone du site 
 
-Ajout des ressources (police et images) pour remplir la maquette
+Pour la partie 4 :
+
+=> Ajuster les marges , pagging
+=> Ajuster le rendu ds images
+=> Ajouter les etoiles aux cartes
+=> Finaliser le HEADER
+=> Finaliser le Footer
+=> Optimiser le code CSS 
+=> Valider le document HTML et CSS sur la validateur
