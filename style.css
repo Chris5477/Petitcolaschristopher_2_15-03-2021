@@ -358,3 +358,232 @@ footer div{
     justify-content: space-evenly;
 }
 
+@media screen and (min-width:320px) and (max-width:673px){
+
+    body{
+        padding: 0%;
+        margin: 0%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+
+    section{
+        margin-top: 20px;
+    }
+
+    /* Style de la section de recherche */
+
+    #search{
+        order: 1;
+    }
+
+    
+    form button{
+        width: 50px;
+        padding: 0px;
+        border-radius: 0px;
+        overflow: hidden;
+    }
+    
+    /* Style de la section plus populaire */
+
+    #popular{
+        order: 2;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .list-popular{
+        width: 100%;
+    }
+
+    /* Style de la section hebergement */
+
+
+    #hebergement{
+        order: 3;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+        height: auto;
+    }
+
+    .list-host{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .host{
+        width: 100%;
+        margin: 3%;
+        height: auto;
+    }
+
+    .heb{
+        height:100px;
+    }
+
+    /* Style de la section activity */
+
+    #activity{
+        order: 4;
+        height: auto;
+    }
+
+    .list-activity{
+        height: auto;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .fun-card{
+        width: 100%;
+        height: auto;
+    }
+
+    .fun{
+        height: 150px;
+    }
+
+    /* Style du pied de page */
+
+    footer{
+        order: 5;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; 
+        margin-top: 30px;
+    }
+
+    footer div {
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (min-width:674px) and (max-width:990px){
+
+body{
+    margin: 0%;
+    padding: 0%;
+    display: grid;
+    grid-template-columns: 3% 30% 4% 60% 3% ;
+    grid-template-rows: 100px  auto  auto  auto 200px;
+}
+
+header{
+    grid-area: 1/2/2/5;
+    width: 94%;
+
+}
+
+#search{
+    grid-area: 2/2/3/3;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form input{
+    width: 130px;
+    padding: 5px;
+}
+
+form button{
+    width: 50px;
+    padding: 0%;
+    border-radius: 0px;
+}
+
+.icon{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon button{
+    width: 80%;
+}
+
+#hebergement{
+    width: 100%;
+    height: auto;
+    grid-area: 2/4/3/5;
+}
+
+.list-host{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.host{
+    width: 45%;
+    height: auto;
+}
+
+.heb{
+    height: 100px;
+}
+
+#popular{
+    width: 100%;
+    height: auto;
+    grid-area: 3/2/4/3;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.list-popular{
+    width: 100%;
+    height: 600px;
+}
+
+#activity{
+    margin: 0%;
+    grid-area: 3/4/4/5;
+    width: 100%;
+    height: auto;
+}
+
+.list-activity{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.fun-card{
+    width: 45%;
+    margin: 10px;
+    height: 250px;
+    border-bottom-left-radius : 20px;
+    border-bottom-right-radius : 20px;
+}
+
+.fun{
+    width: 100%;
+    border-top-left-radius : 20px;
+    border-top-right-radius : 20px;
+}
+
+
+footer{
+    grid-area: 5/2/6/5;
+    width: 94%;
+}
+}
