@@ -92,6 +92,10 @@ form button{
     top: 2px;
 }
 
+.fa-search{
+    display: none;
+}
+
 input{
     width: 220px;
     height: 35px;
@@ -112,17 +116,13 @@ input{
     border-radius: 50%;
     background-color: #DEEBFF;
     color: #0065FC;
-    position: relative;
-    left:15px;
 }
 
 
 .icon button{
     font-weight: bolder;
-    width: 200px;
     margin-right: 60px;
     font-size: 18px;
-    padding: 12px 0;
     background-color: #FFF;
     border: 1px solid grey;
     border-top-right-radius: 20px;
@@ -139,6 +139,14 @@ input{
     margin-top: 20px;
 }
 
+.fa-star{
+    color: #0065FC;
+}
+
+.nostar{
+    color: #F2F2F2;
+}
+
 #hebergement{
     width: 73%;
     height: 600px;
@@ -147,34 +155,39 @@ input{
 
 #hebergement h2 {
     height: 4%;
-    padding:25px;
+    padding:10px 25px;
 }
 
 .list-host{
-    height: 95%;
+    height: 90%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
 .host{
     width: 30%;
     height: 40%;
+    margin-left: 20px;
     background-color:#FFF;
+    border-top-left-radius: 20px;;
+    border-top-right-radius: 20px;;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
 .heb{
-    width: 96%;
-    height: 65%;
-    padding: 5px;
+    margin: auto;
+    width: 98%;
+    height: 60%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    background-size: cover;
+    background-position: center;
 }
 
 .infohost{
+    height:auto;
     padding-left: 10px;
     
 }
@@ -242,10 +255,13 @@ input{
 }
 
 .mostpop{
+    margin:5px;
     width: 45%;
     height: 100%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    background-size: cover;
+    background-position: center;
 }
 
 .info{
@@ -278,13 +294,13 @@ input{
 
 #activity{
     width: 100%;
-    height:600px;
-    margin-top: 50px;
+    height: auto;
 }
 
 .list-activity{
-    width: 100%;
-    height: 600px;
+    width: 98%;
+    height: 400px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -292,55 +308,69 @@ input{
 
 .large{
     width: 24%;
-    height: 500px;
+    height: 400px;
 }
 
 .size{
     width: 24%;
-    height: 300px;
+    height: 230px;
+    margin-bottom: 40px;
 }
 
 .size1{
     width: 24%;
-    height: 200px;
+    height: 130px;
 }
 
 .size2{
     width: 24%;
-    height: 250px;
+    height: 170px;
+}
+
+.firsthalf{
+    margin-bottom: 40px;
 }
 
 .fun{
-    width: 95%;
-    height: 90%;
+    background-size: cover;
+    background-position-y: 35%;
+    background-position-x: center;
 }
 
 .funone{
     background-image: url(Reservia/images/activites/small/reno.jpg);
-    background-position-y: top;
+    height: 360px;
+    width: 98%;
 }
 
 .funtwo{
     background-image: url(Reservia/images/activites/small/paul-hermann.jpg);
-    background-position-y: 40%;
+    height: 190px;
+    width: 98%;
 }
 
 .funthree{
     background-image: url(Reservia/images/activites/small/kevin-hikari.jpg);
+    height: 90px;
+    width: 98%;
 }
 
 .funfour{
     background-image: url(Reservia/images/activites/small/kilyan.jpg);
+    height: 360px;
+    width: 98%;
 }
 
 .funfive{
     background-image: url(Reservia/images/activites/small/florian-wehde.jpg);
-    background-position-y: top;
-
+    height: 150px;
+    width: 98%;
 }
 
 .funsix{
     background-image: url(Reservia/images/activites/small/lena-paulin.jpg);
+    height: 150px;
+    width: 98%;
 }
 
 footer{
@@ -357,6 +387,7 @@ footer div{
     flex-direction: column;
     justify-content: space-evenly;
 }
+
 
 @media screen and (min-width:320px) and (max-width:673px){
 
@@ -379,11 +410,23 @@ footer div{
     }
 
     
-    form button{
-        width: 50px;
-        padding: 0px;
-        border-radius: 0px;
+    form input{
+        width: 130px;
+        padding: 5px;
+    }
+    
+    form button {
         overflow: hidden;
+        color: #0065FC;
+        border-radius: 0px;
+        padding: 0%;
+        width: 50px;
+    }
+
+    .fa-search{
+        display: inline ;
+        background-color: #0065FC;
+        color: #FFF;    
     }
     
     /* Style de la section plus populaire */
@@ -461,7 +504,19 @@ footer div{
 
     footer div {
         width: 100%;
+        margin-top: 15px;
     }
+
+    footer p{
+        padding: 10px 10px;
+        font-weight: 600;
+        color: black;
+    }
+
+    footer a {
+        padding: 5px 10px;
+        color: black
+    };
 
 }
 
@@ -478,8 +533,7 @@ body{
 
 header{
     grid-area: 1/2/2/5;
-    width: 94%;
-
+    width: 100%;
 }
 
 #search{
@@ -498,10 +552,18 @@ form input{
     padding: 5px;
 }
 
-form button{
-    width: 50px;
-    padding: 0%;
+form button {
+    overflow: hidden;
+    color: #0065FC;
     border-radius: 0px;
+    padding: 0%;
+    width: 50px;
+}
+
+.fa-search{
+    display: inline;
+    background-color: #0065FC;
+    color: #FFF;    
 }
 
 .icon{
@@ -569,14 +631,15 @@ form button{
 
 .fun-card{
     width: 45%;
+    height: auto;
     margin: 10px;
-    height: 250px;
     border-bottom-left-radius : 20px;
     border-bottom-right-radius : 20px;
 }
 
 .fun{
     width: 100%;
+    height: 200px;
     border-top-left-radius : 20px;
     border-top-right-radius : 20px;
 }

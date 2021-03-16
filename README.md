@@ -1,17 +1,11 @@
 Réalisation du Projet 2 ( Open class rooms) => PARTIE 3
 
-Ajustement du document HTML 
-Ajustement de Style CSS 
+Ajustement du document HTML et Ajout des étoiles 
+Ajustement des images et du footer 
 
-Ajout du format tablette du site 
-Ajout du format téléphone du site 
-
-Pour la partie 4 :
+Pour la partie 5 :
 
 => Ajuster les marges , pagging
-=> Ajuster le rendu ds images
-=> Ajouter les etoiles aux cartes
 => Finaliser le HEADER
-=> Finaliser le Footer
 => Optimiser le code CSS 
 => Valider le document HTML et CSS sur la validateur
