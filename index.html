@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="desktopstyle.css">
         <script src="https://kit.fontawesome.com/7b5f9a1704.js" crossorigin="anonymous"></script>
         <title>Reservia</title>
 
@@ -19,16 +19,17 @@
 
                 <h1><img src="Reservia/images/logo/Reservia.svg" alt="Logo de 'l'entreprise"/></h1>
                 
+
                 <nav>
                     <ul>
                         <li><a href="#hebergement">Hébergements</a></li>
                         <li><a href="#activity">Activités</a></li>
-                        <li><a href="#">S'inscrire</a></li>
                     </ul>
                 </nav>
-        </header>
 
-        <!-- <i class="fas fa-search"></i> -->
+                <a class="login" href="#">S'inscrire</a>
+                
+        </header>
 
         <section id="search">
 
@@ -37,7 +38,7 @@
 
             <form method="POST" action="#">
 
-                <i class="fas fa-map-marker-alt"></i><input type="text" value="Marseille , France"/>
+                <i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Marseille , France"/>
                 <button type="submit"><i class="fas fa-search"></i>Rechercher</button>
                 
             </form>
@@ -45,12 +46,12 @@
             
             <div class="icon">
                 
-                <p>Filtres</p>
+                <p>Filtres</p>  
 
-                <div class="filter"><button><i class="fas fa-money-bill-wave"></i>Economique</button></div>
-                <div class="filter"><button><i class="fas fa-child"></i>Familial</button></div>
-                <div class="filter"><button><i class="fas fa-heart"></i>Romantique</button></div>
-                <div class="filter"><button><i class="fas fa-dog"></i>Animaux autorisés</button></div>
+                <div class="filter"><i class="fas fa-money-bill-wave"></i><button></i>Economique</button></div>
+                <div class="filter"><i class="fas fa-child"></i><button>Familial</button></div>
+                <div class="filter"><i class="fas fa-heart"></i><button>Romantique</button></div>
+                <div class="filter"><i class="fas fa-dog"></i><button>Animaux autorisés</button></div>
 
             </div>
 
@@ -71,7 +72,7 @@
                     <div class="infohost">
 
                         <p class="name">Auberge la Cannebière</p>
-                        <p class="price">Nuit à partir de 25<span>€</span></p>
+                        <p class="price">Nuit à partir de <span>25€</span></p>
     
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -146,7 +147,7 @@
                         <div class="infohost"> 
 
                         <p class="name">Auberge Le Panier</p>
-                        <p class="price">Nuit à partir de 23<span>€</span></p>
+                        <p class="price">Nuit à partir de <span>23€</span></p>
                 
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -177,9 +178,9 @@
 
                 </div>
 
-            </div>
+                <p>Afficher plus</p>
 
-            <p>Afficher plus</p>
+            </div>
 
         </section>
 
@@ -201,13 +202,17 @@
                     <div class="info">
 
                         <p class="name">Hôtel Le soleil du matin</p>
-                        <p>Nuit à partir de 128<span>€</span></p>
+                        <p class="price">Nuit à partir de 128<span>€</span></p>
 
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <div> 
+
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+
+                        </div>
 
                     </div>
 
@@ -223,11 +228,15 @@
                         <p class="name">Au coeur de l'eau Chambres d'hôtes</p>
                         <p class="price">Nuit à partir de 71<span>€</span></p>
 
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star nostar"></i>
+                        <div>
+
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star nostar"></i>
+
+                        </div>
 
                     </div>
 
@@ -241,12 +250,15 @@
 
                         <p class="name">Hôtel Tout bleu et blanc</p>
                         <p class="price">Nuit à partir de 68<span>€</span></p>
+                        <div>
+                                
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star nostar"></i>
 
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star nostar"></i>
+                        </div>
 
                     </div>
 
