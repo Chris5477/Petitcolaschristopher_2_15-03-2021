@@ -1,14 +1,11 @@
-Réalisation du Projet 2 ( Open class rooms) => PARTIE 4
+Réalisation du Projet 2 ( Open class rooms) => PARTIE 6
 
-Majorité des placements et bug corrigés
-améliorations des versions tablette et mobile
+Correction Header , bouton recherche , menu navigation version tablette ----------------------------
+Ajout d'une animation CSS au survol des filtres (PROBLEME VERSION TABLLETE MARCHE PAS ???)
 
-Pour la partie 6:
 
-Corriger le Header de la version tablette bouton s'inscrire a droite 
-Corriger le paragraphe vers le logo infi en version mobile 
-probleme d'affichage loupe bouton de recherche version mobile et tablette
-Optimiser les point de rupture
-Ajout d'un effet de survol sur les boutons filtres 
+Pour la partie 7:
+
+Tester et verification que tout se passe bien
 Purification du code CSS 
 Validation du code CSS

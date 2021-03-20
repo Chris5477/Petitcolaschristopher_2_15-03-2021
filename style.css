@@ -16,7 +16,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         font-family: "raleway-regular", sans-serif;
-        padding:30px 50px;
+        padding:0 50px;
         
 }
 
@@ -85,27 +85,53 @@ form{
 }
 
 
-form i{
+.fa-map-marker-alt{
    padding: 14px 14px 16px 14px;
-   background-color: #F2F2F2;
+   background-color: #FFF;
    border-top-left-radius: 20px;
    border-bottom-left-radius: 20px;
 }
 
 form button{
-    padding: 10px 10px;
-    font-size: 19px;
+    position: relative;
+    right: 5px;
     background-color: #0065FC;
     color: #FFF;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    position: relative;
-    top: 2px; right: 5px;
-   
 }
 
-form .fa-search{
+.desktop{ 
+    font-size: 15px;
+    height: 47px;
+    padding-right: 15px;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.nomad{
+    width: 50px;
+    height: 50px;
     display: none;
+}
+
+.fa-search{
+    font-size: 15px;
+    color: #FFF;
+    background-color: #0065FC;
+    
+}
+
+.filter:hover button{
+    position: relative;
+    z-index: -100;
+    animation: fillOn 0.5s forwards;
+}
+
+@keyframes fillOn{
+   
+    0%{clip-path:circle(0%)}
+    50%{clip-path: circle(50%); background-color: #DEEBFF;}
+    100%{clip-path: circle(100%); background-color: #0065FC; color: #FFF;}
 }
 
 input{
@@ -150,18 +176,19 @@ input{
     border-left: none;
 }
 
+.result{
+    margin:25px 0;
+    display: flex;
+}
+
 .fa-info{
     color: #0065FC;
     border: 1px solid #DEEBFF;
-    padding: 5px 10px;
     border-radius: 50%;
-    margin-right: 20px;
+    padding-right: 20px;
+    place-self: center center;
 }
 
-#search p:last-child{
-    margin-top: 20px;
-    padding-bottom: 30px;   
-}
 
 .fa-star{
     color: #0065FC;
@@ -260,7 +287,7 @@ input{
 
 .name{
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .price{
@@ -354,6 +381,10 @@ span{
     background-image: url(Reservia/images/hebergements/small/febrian-zakaria2.jpg);
     background-position-y:center;
 
+}
+
+.star{
+    display: inline;
 }
 
 #activity{
@@ -545,6 +576,15 @@ footer a{
         padding:15px 0px;
     }
 
+    .desktop{
+        display: none;
+    }
+
+    .nomad{
+        border-radius: 10px;
+        display: initial;
+    }
+
     .icon{
         display: flex;
         flex-wrap: wrap;
@@ -561,42 +601,7 @@ footer a{
         padding: 5px;
     }
     
-    form button {
-        overflow: hidden;
-        color: #0065FC;
-        border-radius: 0px;
-        padding: 0%;
-        width: 50px;
-        height: 50px;
-    }
-
-    .fa-search{
-        display: inline ;
-        background-color: #0065FC;
-        color: #FFF;    
-    }
- 
-    .icon i{
-        padding:20px;
-        border-radius: 50%;
-        background-color: #DEEBFF;
-        color: #0065FC;
-        position: relative;
-        left: 15px;
-    }
-    
-    .icon button{
-        font-weight: bolder;
-        font-size: 18px;
-        padding:15px 25px;
-        background-color: #FFF;
-        border: 1px solid grey;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-left: none;
-    }
-
-    
+        
     /* Style de la section plus populaire */
 
     #popular{
@@ -705,7 +710,7 @@ body{
     padding: 0%;
     display: grid;
     grid-template-columns: 3% 30% 4% 60% 3% ;
-    grid-template-rows: 100px  auto  auto  auto 200px;
+    grid-template-rows: 100px  repeat(3, auto) 200px;
 }
 
 header{
@@ -714,18 +719,18 @@ header{
 }
 
 h1{
-    width: 60%;
+    width: 50%;
     order: 1;
 }
 
 .login{
-    width: 40%;
-    order:2;
+    order:3;
+    width: auto;
 }
 
 nav{
-    width: 100%;
-    order: 3;
+    width: 40%;
+    order: 2;
 }
 
 nav a{
@@ -736,90 +741,45 @@ nav a{
 #search{
     grid-area: 2/2/3/3;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#search{
+    justify-content: space-evenly;
+    align-items: flex-start;
     order: 1;
     padding-left: 20px;
+    border-radius: 20px;
+    background-color: #F2F2F2;
 }
 
 #search h2{
-    padding-top: 5px;
+    margin-top:15px;
+    padding-right: 5px;
     font-weight: bolder;
     font-size: 20px;
 }
 
-#search p{
-    padding:15px 0px;
-}
-
 .icon{
+    height: 40%;
     display: flex;
-    flex-wrap: wrap;
-}
-
-.icon p{
-    width: 100%;
-    font-weight: bold;
-    font-size: 20px;
+    flex-direction: column;
 }
 
 form input{
-    width: 100px;
+    width: 120px;
+    height: 40px;
     padding: 5px;
-    font-size: 10px;
+    font-size: 12px;
 }
 
-form button {
-    overflow: hidden;
-    color: #0065FC;
-    border-radius: 0px;
-    width: 40px;
+.desktop{
+    display: none;
 }
 
-.fa-search{
-    display: inline;
-    background-color: #0065FC;
-    color: #FFF;
-    position: relative; 
-    right:15px;
-}
-
-.icon{
-    margin-top: 20px;
-}
-
-.icon div{
-    margin: 0%;
-    display: inline;
-}
-
-.icon p{
-    display: inline;
-}
-
-.icon i{
-    padding:20px;
-    border-radius: 50%;
-    background-color: #DEEBFF;
-    color: #0065FC;
-    position: relative;
-    left: 15px;
-}
-
-.icon button{
-    font-weight: bolder;
-    font-size: 10px;
-    background-color: #FFF;
-    border: 1px solid grey;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-left: none;
+.nomad{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: initial;
 }
 
 
@@ -831,6 +791,7 @@ form button {
 
 .list-host{
     width: 100%;
+    font-size: 12px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -849,29 +810,34 @@ form button {
 
 #popular{
     width: 100%;
-    height: auto;
+    height: 100%;
+    margin-top: 20px;
     grid-area: 3/2/4/3;
     display: flex;
     flex-direction: column;
+    justify-content:space-between;
 }
 
 
 .list-popular{
     width: 100%;
-    height: 600px;
-    justify-content: space-evenly;
+    height: 90%;
+    font-size: 12px;
 }
 
 
 #activity{
-    margin: 0%;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    margin-top: 20px;
     grid-area: 3/4/4/5;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .list-activity{
-    width: 100%;
+    margin: auto;
+    width: 98%;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -897,6 +863,6 @@ form button {
 
 footer{
     grid-area: 5/2/6/5;
-    width: 94%;
+    width: 100%;
 }
 }
