@@ -1,11 +1,11 @@
-Réalisation du Projet 2 ( Open class rooms) => PARTIE 6
+Phase final de réalisation de maquette :
 
-Correction Header , bouton recherche , menu navigation version tablette ----------------------------
-Ajout d'une animation CSS au survol des filtres (PROBLEME VERSION TABLLETE MARCHE PAS ???)
+Reajustement des classes HTML pour une meilleure visibilité
+Allegement du code CSS 
+Probleme animation bouton filtre corrigé 
+Ajustement des cassures lors du retrecissement de la page 
+Validation du code HTML OK!
+Validation du code CSS OK!
 
+Vérification du projet avant soutenance !
 
-Pour la partie 7:
-
-Tester et verification que tout se passe bien
-Purification du code CSS 
-Validation du code CSS

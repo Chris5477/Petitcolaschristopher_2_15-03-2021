@@ -1,7 +1,8 @@
-*{
+*{                                                                      /* PARAMETRE GENERAUX */
     text-decoration: none;
     list-style: none;
     margin: 0%;
+    font-family: "raleway-regular", sans-serif;    
 }
 
 @font-face{
@@ -11,15 +12,30 @@
     src:url("raleway-regular-webfont.woff2");
 }
 
+.link_card{
+    color: black;
+}
+
     body{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        font-family: "raleway-regular", sans-serif;
-        padding:0 50px;
-        
+        padding: 0 50px;
 }
 
+.host , .mieux_note , .fun-card{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.all_card_heb , .fun{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+                                                                            /* PARAMETRE HEADER*/
 header{
     width: 100%;
     display:flex;
@@ -33,29 +49,30 @@ h1{
 
 .login{
     font-size: 20px;
-    padding: 35px;
+    padding: 35px 0;
+    margin-right: 35px;
 }
 
 nav{
-    width: 30%;    
+    width: 30%; 
 }
 
 nav ul{
-    padding: 0%;
+    padding: 0%;                               /* enleve le padding de la gauche de ul*/
     display: flex;
     justify-content: space-evenly; 
-    align-items: flex-start;
+    
 }
 
 nav ul li{
-    padding: 0%;
-    width: 50%;
+    margin-right: 15px;
+    width: 50%; 
     text-align: center;
 }
 
 nav a {
     display: block;
-    padding-top: 35px;
+    padding-top: 35px;                       /*pour animation au suvol*/
     font-size: 20px;
     color: black;
 }
@@ -65,8 +82,9 @@ nav ul li:hover a{
     color: #0065FC;
 }
 
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-#search{
+#search{                                                                                    /*PARAMETRE SECTION SEARCH */
     width: 100%;
     height: auto;
 }
@@ -81,49 +99,98 @@ nav ul li:hover a{
 }
 
 form{
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 
-.fa-map-marker-alt{
-   padding: 14px 14px 16px 14px;
-   background-color: #FFF;
+.logo_position{
+   padding: 16px 14px 18px 14px;
+   background-color: #F2F2F2;
    border-top-left-radius: 20px;
    border-bottom-left-radius: 20px;
 }
 
-form button{
+form button{                       /*paramètre généraux bouton validation formulaire*/
     position: relative;
     right: 5px;
     background-color: #0065FC;
     color: #FFF;
 }
 
-.desktop{ 
+.desktop{                   /*paramatre bouton bureau*/
     font-size: 15px;
     height: 47px;
-    padding-right: 15px;
+    padding-right: 16px;
     text-align: center;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-.nomad{
+.nomad{     /*parametre bouton version mobile/tablette , non affiché*/
     width: 50px;
     height: 50px;
     display: none;
 }
 
-.fa-search{
+.logo_recherche{
     font-size: 15px;
     color: #FFF;
     background-color: #0065FC;
-    
+    display: block;
+
 }
 
-.filter:hover button{
+input{
+    width: 220px;
+    height: 35px;
+    padding: 5px 10px;
+    font-weight: bolder;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-left: 0px;
+}
+
+.list_filtre{
+    margin-top: 20px;
+}
+
+.filtre{
+  display: inline;
+}
+
+.list_filtre  p{         /* paragraphe et filtre sur la même ligne*/
+    display: inline;
+    font-weight: bold;
+}
+
+.filtre_icon{
+    padding:20px;
+    border-radius: 50%;
+    background-color: #DEEBFF;
+    color: #0065FC;
     position: relative;
-    z-index: -100;
+    left: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.filtre button{
+    font-weight: bolder;
+    font-size: 15px;
+    padding:15px 30px;
+    background-color: #FFF;
+    border: 1px solid grey;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: none;   
+}
+
+.filtre:last-child button{
+    letter-spacing: -1px; 
+}
+
+.filtre:hover button{
+    
     animation: fillOn 0.5s forwards;
 }
 
@@ -134,54 +201,12 @@ form button{
     100%{clip-path: circle(100%); background-color: #0065FC; color: #FFF;}
 }
 
-input{
-    width: 220px;
-    height: 35px;
-    padding: 5px 10px;
-    font-weight: bolder;
-    border-right: none;
-    border:1px solid grey;
-}
-
-.icon{
-    margin-top: 20px;
-}
-
-.icon div{
-  display: inline;
-  margin-left: 3px;
-}
-
-.icon p{
-    display: inline;
-}
-
-.icon i{
-    padding:20px;
-    border-radius: 50%;
-    background-color: #DEEBFF;
-    color: #0065FC;
-    position: relative;
-    left: 20px;
-}
-
-.icon button{
-    font-weight: bolder;
-    font-size: 18px;
-    padding:15px 30px;
-    background-color: #FFF;
-    border: 1px solid grey;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-left: none;
-}
-
 .result{
     margin:25px 0;
     display: flex;
 }
 
-.fa-info{
+.logo_lettreI{
     color: #0065FC;
     border: 1px solid #DEEBFF;
     border-radius: 50%;
@@ -198,11 +223,18 @@ input{
     color: #F2F2F2;
 }
 
-#hebergement{   
-    width: 63%;
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#hebergement{                                                                                   /* PARAMETRE SECTION HEBERGEMENT */  
+    width: 69%;
     height: 750px;
     background-color: #F2F2F2;
     border-radius: 20px;
+}
+
+#hebergement h2{
+    font-size: 22px;
+    padding:40px 0 5px 30px;
 }
 
 .list-host{
@@ -218,31 +250,26 @@ input{
     margin-top: 30px;
     margin-left: 20px;
     background-color:#FFF;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
     box-shadow: 2px 2px 10px rgba(180, 177, 177, 0.808);
+    position: relative;
 }
 
 .list-host > p{
     font-size: 18px;
-    margin-left: 25px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-left:25px;
     letter-spacing: -1px;
-
+    width: 100%;
 }
 
-.heb{
+.all_card_heb{
     margin: auto;
     width: 97%;
-    height: 60%;
+    height: 50%;
     margin-top: 5px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
+    background-size: cover;
 }
 
 .infohost{
@@ -257,32 +284,22 @@ input{
 
 .hebtwo{
     background-image: url(Reservia/images/hebergements/small/fred-kleber.jpg);
-    background-position-y:center;
 }
 
 .hebthree{
     background-image: url(Reservia/images/hebergements/small/reisetopia.jpg);
-    background-position-y:center;
 }
 
 .hebfour{
-    background-image: url(Reservia/images/hebergements/small/annie-spratt.jpg);
-    background-position-y:center;
+    background-image: url(Reservia/images/hebergements/small/annie-spratt.jpg); 
 }
 
 .hebfive{
     background-image: url(Reservia/images/hebergements/small/nicate-lee.jpg);
-    background-position-y:center;
 }
 
 .hebsix{
     background-image: url(Reservia/images/hebergements/small/febrian-zakaria.jpg);
-    background-position-y:center;
-}
-
-#hebergement h2 , #popular h2{
-    font-size: 22px;
-    padding:40px 0 5px 30px;
 }
 
 .name{
@@ -299,21 +316,27 @@ span{
     font-weight: bold;
 }
 
-#popular{
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#popular{                                                                                               /* PARAMETRE SECTION POPULAR */
     border-radius: 20px;
     background-color: #F2F2F2;
-    width: 33%;
+    width: 28%;
     height: 750px;
 }
 
-.head{
+.header_popular{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
+#popular h2{
+    font-size: 22px;
+    padding:40px 0 5px 30px;
+}
 
-
-.head i{
+.header_popular i{
     padding:40px 25px 20px 0;
     font-size: 25px;
 }
@@ -325,25 +348,18 @@ span{
     align-items: center;
 }
 
-.pop{
+.mieux_note{
     width: 90%;
     height: 25%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display:flex;
     background-color:#FFF;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     margin-bottom: 40px;
     box-shadow: 2px 2px 10px rgba(180, 177, 177, 0.808);
 }
 
-.mostpop{
+.all_card_popular{
     margin: 5px;
     width: 45%;
-    height: 92%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     background-size: cover;
@@ -352,19 +368,20 @@ span{
 
 .info{
     width: 55%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     padding-left: 10px;
+    position: relative;
+    
 }
 
-.info p:first-child{
+.info .name{
     padding-top: 20px;
     width: 80%;
 }
 
-.info .fa-star{
-   margin-top: 40px;
+.star{
+    position: absolute;
+    bottom: 20px;
+    
 }
 
 .imgone{
@@ -387,10 +404,12 @@ span{
     display: inline;
 }
 
-#activity{
+/* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#activity{                                                                                      /* PARAMETRE SECTION ACTIVITE */
     width: 100%;
     height: auto;
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 #activity h2{
@@ -407,42 +426,38 @@ span{
 }
 
 .fun-card{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     background-color: #F2F2F2;
     box-shadow: 2px 2px 10px rgba(180, 177, 177, 0.808);
 }
 
-.fun-card p{
+.activite{
     padding: 15px;
     font-weight: bold;
 
 }
 
-.large{
+.large{                      /*dimension image 1 et 4 */
     width: 23%;
     height: 400px;
 }
 
-.size{
+.size{                      /*dimension image 2 */
     width: 23%;
     height: 190px;
     margin-bottom: 40px;
 }
 
-.size1{
+.size1{                     /*dimension image 3 */
     width: 23%;
     height: 170px;
 }
 
-.size2{
+.size2{                     /* dimension image 5 et 6 */
     width: 23%;
     height: 170px;
 }
 
-.firsthalf{
+.firsthalf{                /* marge entre image 5 et 6 */
     margin-bottom: 40px;
 }
 
@@ -450,8 +465,7 @@ span{
     background-size: cover;
     background-position-y: 35%;
     background-position-x: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+
 }
 
 .funone{
@@ -490,10 +504,11 @@ span{
     width: 100%;
 }
 
-footer{
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+footer{                                                                                            /* PARAMETRE FOOTER */  
     width: 100%;
-    height: 200px;
-    margin-top: 60px;
+    height: 250px;
     background-color: #F2F2F2;
     color: black;
     display: flex;
@@ -524,7 +539,7 @@ footer a{
         padding: 0%;
         margin: 0%;
         flex-direction: column;
-        flex-wrap: nowrap;
+        
     }
 
     header{
@@ -585,84 +600,73 @@ footer a{
         display: initial;
     }
 
-    .icon{
+    .list_filtre{
         display: flex;
         flex-wrap: wrap;
     }
 
-    .icon p{
+    .list_filtre p{
         width: 100%;
-        font-weight: bold;
-        font-size: 20px;
     }
     
     form input{
-        width: 130px;
+        width: 180px;
         padding: 5px;
     }
     
         
-    /* Style de la section plus populaire */
-
-    #popular{
-        order: 2;
-        width: 100%;
-        margin: 0%;
-        padding: 0%;
-    }
-
-    .list-popular{
-        width: 100%;
-    }
-
-    .pop{
-        width: 95%;
-    }
-
+    
     /* Style de la section hebergement */
 
 
     #hebergement{
+        background-color: #FFF;
         order: 3;
         width: 100%;
-        margin: 0%;
-        padding: 0%;
-        height: auto;
+        height: auto;   
     }
-
+    
     .list-host{
-        width: 100%;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
     }
-
+    
     .host{
         width: 95%;
         margin: 3%;
-        height: auto;
+        height: 220px;
     }
-
-    .heb{
+    
+    .all_card_heb{
         height:100px;
+    }
+    
+    /* Style de la section plus populaire */
+
+    #popular{
+        order: 2;
+        width: 100%;     
     }
 
     /* Style de la section activity */
-
+    
     #activity{
         order: 4;
         height: auto;
         width: 100%;
     }
 
-    .list-activity{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: nowrap;
+    #activity h2 {
+        margin-left: 20px;
     }
+
+    .list-activity{
+        height: auto;
+    }
+
     .fun-card{
-        margin: 20px auto;
+        margin: 20px 3%;
         height: 200px;
         width: 95%;
         box-shadow: 2px 2px 10px rgba(180, 177, 177, 0.808);
@@ -677,11 +681,11 @@ footer a{
 
     footer{
         order: 5;
-        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around; 
         margin-top: 30px;
+        padding-left: 25px;
     }
 
     footer div {
@@ -698,15 +702,15 @@ footer a{
     footer a {
         padding: 5px 10px;
         color: black
-    };
+    }
 
 }
 
 
-@media screen and (min-width:769px) and (max-width:1080px){
+@media screen and (min-width:769px) and (max-width:991px){
 
 body{
-    margin: 0%;
+    margin: 0 25px;
     padding: 0%;
     display: grid;
     grid-template-columns: 3% 30% 4% 60% 3% ;
@@ -715,7 +719,6 @@ body{
 
 header{
     grid-area: 1/2/2/5;
-    width: 100%;
 }
 
 h1{
@@ -733,42 +736,55 @@ nav{
     order: 2;
 }
 
-nav a{
-    padding-bottom: 20px;
-}
-
-
 #search{
     grid-area: 2/2/3/3;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
     order: 1;
-    padding-left: 20px;
     border-radius: 20px;
-    background-color: #F2F2F2;
 }
 
 #search h2{
-    margin-top:15px;
-    padding-right: 5px;
     font-weight: bolder;
+    padding: 0 15px;
     font-size: 20px;
+    width: 90%;
 }
 
-.icon{
-    height: 40%;
+#search p{
+    width: 90%;
+    font-size: 15px;
+    padding: 20px 15px;
+    
+}
+
+.list_filtre{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.list_filtre p{
+    width: 100%;
+}
+
+.filtre button{
+    font-size: 16px;
+    margin-bottom:15px;
+    padding: 14px 10px 14px 20px;
+}
+
+
+.logo_lettreI{
+    margin-left: 12px;
+    font-size: 15px;
 }
 
 form input{
-    width: 120px;
+    width: 100px;
     height: 40px;
-    padding: 5px;
+    padding-left: 5px;
     font-size: 12px;
 }
 
@@ -790,8 +806,7 @@ form input{
 }
 
 .list-host{
-    width: 100%;
-    font-size: 12px;
+    font-size: 14px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -799,12 +814,16 @@ form input{
     
 }
 
-.host{
-    width: 45%;
-    height: auto;
+.list-host > p{
+    padding: 25px 10px;
 }
 
-.heb{
+.host{
+    width: 45%;
+    height: 200px;
+}
+
+.all_card_heb{
     height: 100px;
 }
 
@@ -833,36 +852,34 @@ form input{
     grid-area: 3/4/4/5;
     width: 100%;
     height: 100%;
+    
+}
+
+#activity h2{
+    padding: 40px 0 20px 25px;
 }
 
 .list-activity{
-    margin: auto;
-    width: 98%;
     height: auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    
 }
 
 .fun-card{
     width: 45%;
     height: auto;
     margin: 10px;
-    border-bottom-left-radius : 20px;
-    border-bottom-right-radius : 20px;
 }
 
 .fun{
     width: 100%;
     height: 200px;
-    border-top-left-radius : 20px;
-    border-top-right-radius : 20px;
 }
 
-
 footer{
+    margin-top: 50px;
     grid-area: 5/2/6/5;
-    width: 100%;
 }
 }
