@@ -1,11 +1,4 @@
-Phase final de réalisation de maquette :
+Apres vérification et suggestion du mentor , correction des de certains détail.
+Le code HTML et CSS est validé 
 
-Reajustement des classes HTML pour une meilleure visibilité
-Allegement du code CSS 
-Probleme animation bouton filtre corrigé 
-Ajustement des cassures lors du retrecissement de la page 
-Validation du code HTML OK!
-Validation du code CSS OK!
-
-Vérification du projet avant soutenance !
-
+Le projet est terminé 
