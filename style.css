@@ -1,8 +1,8 @@
 *{                                                                      /* PARAMETRE GENERAUX */
     text-decoration: none;
     list-style: none;
-    margin: 0%;
-    font-family: "raleway-regular", sans-serif;
+    margin: 0;
+    font-family: "raleway", sans-serif;
     color: black;  
 }
 
@@ -43,6 +43,7 @@ h1{
 
 .login{
     font-size: 20px;
+    font-weight: bold;
     color: #0065FC;
 }
 
@@ -52,7 +53,6 @@ nav{
 
 nav ul{                               /* enleve le padding de la gauche de ul*/
     display: flex;
-    justify-content: space-evenly;
     padding: 0;
 }
 
@@ -63,7 +63,7 @@ nav ul li{
 nav a {
     display: block;
     width: 100%;                      /*pour animation au suvol*/
-    font-size: 22px;
+    font-size: 20px;
     padding: 33px 0px;
     text-align: center;
     color: black;
@@ -93,7 +93,8 @@ nav ul li:hover a{
 }
 
 .logo_position{
-   padding: 16px;
+   height: 20px;
+   padding: 16px 14px 14px 14px;
    background-color: #F2F2F2;
    border-top-left-radius: 20px;
    border-bottom-left-radius: 20px;
@@ -101,7 +102,7 @@ nav ul li:hover a{
 
 form button{                       /*paramètre généraux bouton validation formulaire*/
     position: relative;
-    right: 10px;
+    right: 12px;
     background-color: #0065FC;
     color: #FFF;
     border: 0px;
@@ -111,8 +112,8 @@ form button{                       /*paramètre généraux bouton validation for
 
 .desktop{                            /*paramatre bouton bureau*/
     width: 120px;
-    height: 51px;
-    font-size: 18px;
+    height: 50px;
+    font-size: 16px;
     padding:0px 10px;
     text-align: center;
     border-top-right-radius: 20px;
@@ -120,8 +121,8 @@ form button{                       /*paramètre généraux bouton validation for
 }
 
 .nomad{                              /*parametre bouton version mobile/tablette , non affiché*/
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: none;
 }
 
@@ -134,12 +135,12 @@ form button{                       /*paramètre généraux bouton validation for
 
 input{
     width: 220px;
-    height: 47px;
+    height: 48px;
     padding: 0 10px;
     font-size: 16px;
     font-weight: bolder;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
     border-left: 0px;
     border-right: 0px;
     outline-color:transparent
@@ -160,12 +161,13 @@ input{
     font-weight: bold;
 }
 
-.filtre_icon {
-    display: inline-block;
+.filtre_icon::before{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     height: 20px;
     width: 20px;
-    text-align: center;
-    padding: 16px;
+    padding: 13px;
     border-radius: 50%;
     background-color: #DEEBFF;
     color: #0065FC;
@@ -176,16 +178,16 @@ input{
     width: max-content;
     text-align: center;
     font-weight: bolder;
-    padding: 15px 30px;
+    padding: 12px 35px;
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #FFF;
     border: 1px solid grey;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-left: none;
     position: relative;
-    right: 20px;   
+    right: 30px;
     z-index: -10;
 }
 
@@ -202,16 +204,22 @@ input{
 
 .result{
     margin:20px 0;
+    font-size: 13px;
+    font-weight: lighter;
     display: flex;
+    align-items: center;
 }
+
 
 .logo_lettreI{
     color: #0065FC;
     border: 1px solid #DEEBFF;
     border-radius: 50%;
-    padding-right: 20px;
+    padding: 5px 10px;
     place-self: center center;
+    margin-right: 10px;
 }
+
 
 .fa-star{
     color: #0065FC;
@@ -326,7 +334,7 @@ input{
     padding: 8px 0;
 }
 
-span{
+.cash{
     font-weight: bold;
 }
 
@@ -407,10 +415,6 @@ span{
     background-image: url(Reservia/images/hebergements/small/febrian-zakaria2.jpg);
     background-position-y:center;
 
-}
-
-.star{
-    display: inline;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -519,9 +523,9 @@ footer{                                                                         
 
 footer div{
     width: 33%;
+    padding-left: 25px;
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
 }
 
 footer p{
@@ -534,10 +538,6 @@ footer a{
 }
 
 @media screen and (max-width:768px){
-
-            body{ 
-                flex-direction: column; 
-            }
 
             header.main{
                 width: 100%;
@@ -561,9 +561,10 @@ footer a{
                 order: 3;
             }
 
+            
             nav a{
-                width: 100%;
-                margin: 0 10px;
+                font-size: 19px;
+                margin: auto;
                 padding-bottom: 15px;
             }
 
@@ -575,6 +576,7 @@ footer a{
         
             #search{                                                                /* Style de la section de recherche */
                 order: 1;
+                padding: 0 15px;
             }
 
             .desktop{
@@ -614,6 +616,10 @@ footer a{
                 width: 100%;
                 height: auto;
             }
+
+            h3{
+                font-size: 23px;
+            }
             
             .cadre{
                 width: 100%;
@@ -626,7 +632,7 @@ footer a{
         
             .host{
                 width: 100%;
-                height: 220px;
+                height: 200px;
                 max-width: none;
             }
             
@@ -660,7 +666,7 @@ footer a{
             }
             
             .activity_location {
-                margin-left: 30px;
+                margin-left: 20px;
             }
 
             .list-activity{
@@ -670,9 +676,9 @@ footer a{
             }
 
             .fun-card{
-            
                 height: 200px;
-                width: 100%;
+                width: 95%;
+                margin: 10px 5px;
                 box-shadow: 2px 2px 10px rgba(180, 177, 177, 0.808);
             }
 
@@ -684,6 +690,7 @@ footer a{
 
             footer{                         /* -------------------------- Style du pied de page ----------------------------------------------- */
                 order: 5;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around; 
@@ -691,8 +698,7 @@ footer a{
             }
 
             footer div{
-                width: 100%;
-                margin: 25px;
+                width: 80%;
             }
 
 }
@@ -707,6 +713,7 @@ footer a{
 
         header.main{                                               /*-------------  HEADER TABLETTE-----------------------------------------*/
             grid-area: 1/2/2/5;
+            margin-bottom: 20px;
         }
 
         h1{
@@ -721,7 +728,10 @@ footer a{
         nav{
             width: 40%;
             order: 2;
+        }
 
+        nav a{
+            padding-top: 35px;
         }
 
         #search{                                                    /******************** SEARCH TABLETTE --------------------------------*/
@@ -733,18 +743,6 @@ footer a{
             margin-top: 10px;
         }
 
-        .animal{
-            width: 130px;
-            letter-spacing:-1px;
-            padding:15px 20px;
-        }
-
-
-        .logo_lettreI{
-            margin-left: 12px;
-            font-size: 15px;
-        }
-
         .list_filtre p{
             display: block;
             width: 100%;
@@ -752,8 +750,7 @@ footer a{
         }
 
         input{
-            width: 115px;
-            height: 40px;
+            width: 130px;
             font-size: 11px;
         }
 
@@ -765,6 +762,7 @@ footer a{
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
             display: initial;
+            top: 1px;
         }
 
 
