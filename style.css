@@ -53,6 +53,7 @@ nav{
 
 nav ul{                               /* enleve le padding de la gauche de ul*/
     display: flex;
+    justify-content: space-evenly;
     padding: 0;
 }
 
@@ -64,7 +65,7 @@ nav a {
     display: block;
     width: 100%;                      /*pour animation au suvol*/
     font-size: 20px;
-    padding: 33px 0px;
+    padding: 34px 0 33px 0;
     text-align: center;
     color: black;
 }
@@ -72,6 +73,7 @@ nav a {
 nav ul li:hover a{
     border-top: 2px solid #0065FC;
     color: #0065FC;
+    transition: 0.2s;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -187,7 +189,8 @@ input{
     border-bottom-right-radius: 20px;
     border-left: none;
     position: relative;
-    right: 30px;
+    right: 25px;
+    bottom: 1px;
     z-index: -10;
 }
 
