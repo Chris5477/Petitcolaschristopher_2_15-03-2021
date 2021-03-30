@@ -1,9 +1,11 @@
-*{                                                                      /* PARAMETRE GENERAUX */
-    text-decoration: none;
+
+/*-------------------------------PARAMETRE GENERAUX ------------------------------------------------------------------------------------*/
+
+*{
     list-style: none;
-    margin: 0;
+    text-decoration: none;
+    color: black;
     font-family: "raleway", sans-serif;
-    color: black;  
 }
 
 @font-face{
@@ -13,395 +15,30 @@
     src:url("raleway-regular-webfont.woff2");
 }
 
-body{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+                                    /* INSERTION DES IMAGES */
 
-.cadre , .host, .mieux_note, .fun-card, #search, #popular, #activity{
-  border-radius: 20px;
-}
-
-.all_card_heb , .fun{
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-                                                                            /* PARAMETRE header.main*/
-header.main{
-    width: 95%;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: auto;
-}
-
-h1{
-    width: 65%;
-    padding: 20px 0;
-}
-
-.login{
-    font-size: 20px;
-    font-weight: bold;
-    color: #0065FC;
-}
-
-nav{
-    width: 30%; 
-}
-
-nav ul{                               /* enleve le padding de la gauche de ul*/
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0;
-}
-
-nav ul li{
-    width: 50%;
-}
-
-nav a {
-    display: block;
-    width: 100%;                      /*pour animation au suvol*/
-    font-size: 20px;
-    padding: 34px 0 33px 0;
-    text-align: center;
-    color: black;
-}
-
-nav ul li:hover a{
-    border-top: 2px solid #0065FC;
-    color: #0065FC;
-    transition: 0.2s;
-}
-
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-#search{                                                                                    /*PARAMETRE SECTION SEARCH */
-    width: 95%;
-    height: auto;
-    margin: auto;
-}
-
-.indication{
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.proposition{
-    font-weight: 100;
-    margin:20px 0;
-}
-
-.logo_position{
-   height: 20px;
-   padding: 16px 14px 14px 14px;
-   background-color: #F2F2F2;
-   border-top-left-radius: 20px;
-   border-bottom-left-radius: 20px;
-}
-
-form button{                       /*paramètre généraux bouton validation formulaire*/
-    position: relative;
-    right: 12px;
-    background-color: #0065FC;
-    color: #FFF;
-    border: 0px;
-    outline: none;
-    cursor: pointer;
-}
-
-.desktop{                            /*paramatre bouton bureau*/
-    width: 120px;
-    height: 50px;
-    font-size: 16px;
-    padding:0px 10px;
-    text-align: center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.nomad{                              /*parametre bouton version mobile/tablette , non affiché*/
-    width: 50px;
-    height: 50px;
-    display: none;
-}
-
-.logo_recherche{
-    font-size: 15px;
-    color: #FFF;
-    background-color: #0065FC;
-    display: block;
-}
-
-input{
-    width: 220px;
-    height: 48px;
-    padding: 0 10px;
-    font-size: 16px;
-    font-weight: bolder;
-    border-top: 1px solid #F2F2F2;
-    border-bottom: 1px solid #F2F2F2;
-    border-left: 0px;
-    border-right: 0px;
-    outline-color:transparent
-}
-
-.list_filtre{
-    margin-top: 20px;
-}
-
-.filtre{
-  display: inline-block; 
-  cursor: pointer;
-}
-
-.list_filtre  p{         /* paragraphe et filtre sur la même ligne*/
-    display: inline;
-    padding-right: 20px;
-    font-weight: bold;
-}
-
-.filtre_icon::before{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 20px;
-    width: 20px;
-    padding: 13px;
-    border-radius: 50%;
-    background-color: #DEEBFF;
-    color: #0065FC;
-}
-
-.critere{
-    display: inline-block;
-    width: max-content;
-    text-align: center;
-    font-weight: bolder;
-    padding: 12px 35px;
-    margin: 10px 0;
-    font-size: 14px;
-    background-color: #FFF;
-    border: 1px solid grey;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-left: none;
-    position: relative;
-    right: 25px;
-    bottom: 1px;
-    z-index: -10;
-}
-
-.filtre:hover .critere{
-    animation: fillOn 0.5s forwards;
-}
-
-@keyframes fillOn{
-   
-    0%{clip-path:circle(0%)}
-    50%{clip-path: circle(50%); background-color: #DEEBFF;}
-    100%{clip-path: circle(100%); background-color: #0065FC; color: #FFF;}
-}
-
-.result{
-    margin:20px 0;
-    font-size: 13px;
-    font-weight: lighter;
-    display: flex;
-    align-items: center;
-}
-
-
-.logo_lettreI{
-    color: #0065FC;
-    border: 1px solid #DEEBFF;
-    border-radius: 50%;
-    padding: 5px 10px;
-    place-self: center center;
-    margin-right: 10px;
-}
-
-
-.fa-star{
-    color: #0065FC;
-}
-
-.nostar{
-    color: #F2F2F2;
-}
-
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-#hebergement{                                                                                   /* PARAMETRE SECTION HEBERGEMENT */  
-    width: 66%;
-    height: 100%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cadre{
-    width: 95%;
-    height: 700px;
-    background-color: #F2F2F2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.head_host{
-    width: 90%;
-    padding: 22px 10px;
-    display: flex;
-    align-items: center;
-    font-size:22px;
-    font-weight:bold;
-}
-
-.list-host{
-    width: 95%;
-    height: 75%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.host{
-    width: 30%;
-    max-width: 550px;
-    height: 250px;
-    margin: 5px;
-    background-color:#FFF;
-    box-shadow: 4px 4px 10px rgba(180, 177, 177, 0.808);
-    position: relative;
-}
-
-.more{
-    width: 96%;
-    height: 10%;
-    font-size:20px;
-    font-weight: bolder;
-    margin: 20px 0px;
-    letter-spacing: -1px;
-}
-
-.all_card_heb{
-    margin: auto;
-    width: 97%;
-    height: 50%;
-    margin-top:6px;
-    background-size: 100%;
-    background-position: center;
-    background-size: cover;
-}
-
-.infohost{
-    height:auto;
-    padding:10px 20px;
-}
-
-.hebone{
+.card_host1{
     background-image: url(Reservia/images/hebergements/small/marcus-loke.jpg);
 }
 
-.hebtwo{
+.card_host2{
     background-image: url(Reservia/images/hebergements/small/fred-kleber.jpg);
 }
 
-.hebthree{
+.card_host3{
     background-image: url(Reservia/images/hebergements/small/reisetopia.jpg);
 }
 
-.hebfour{
+.card_host4{
     background-image: url(Reservia/images/hebergements/small/annie-spratt.jpg); 
 }
 
-.hebfive{
+.card_host5{
     background-image: url(Reservia/images/hebergements/small/nicate-lee.jpg);
 }
 
-.hebsix{
+.card_host6{
     background-image: url(Reservia/images/hebergements/small/febrian-zakaria.jpg);
-}
-
-.name{
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.price{
-    font-weight: 100;
-    padding: 8px 0;
-}
-
-.cash{
-    font-weight: bold;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-#popular{                                                                                               /* PARAMETRE SECTION POPULAR */
-    width: 34%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.header_popular{
-    width: 85%;
-    font-size: 22px;
-    font-weight: bolder;
-    padding: 22px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.list-popular{
-    width: 95%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mieux_note{
-    width: 90%;
-    height: 25%;
-    display:flex;
-    background-color:#FFF;
-    margin-bottom: 40px;
-    box-shadow: 4px 4px 10px rgba(180, 177, 177, 0.808);
-}
-
-.all_card_popular{
-    margin: 5px;
-    width: 45%;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    background-size: cover;
-    background-position: center;
-}
-
-.info{
-    width: 55%;
-    padding-left: 10px;
-    position: relative;  
-}
-
-.info .name{
-    padding-top: 20px;
-    width: 80%;
-}
-
-.star{
-    position: absolute;
-    bottom: 15px;
 }
 
 .imgone{
@@ -417,68 +54,6 @@ input{
 .imgthree{
     background-image: url(Reservia/images/hebergements/small/febrian-zakaria2.jpg);
     background-position-y:center;
-
-}
-
-/* -------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-#activity{                                                                                      /* PARAMETRE SECTION ACTIVITE */
-    width: 97%;
-    height: auto;
-    margin: auto;
-}
-
-.activity_location{                                   
-    font-weight: bold;
-    font-size: 25px;
-    margin:15px 5px
-}
-
-.list-activity{
-    width: 100%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-between;
-}
-
-.fun-card{
-    background-color: #F2F2F2;
-    box-shadow: 4px 4px 10px rgba(180, 177, 177, 0.808);
-    width: 23%;
-}
-
-.activite{
-    padding: 10px 0px 15px 20px;
-    font-weight: bold;
-}
-
-.large{                      /*dimension image 1 et 4 */
-    height: 400px;
-}
-
-.size{                      /*dimension image 2 */
-    height: 210px;
-    margin-bottom: 40px;
-}
-
-.size1{                     /*dimension image 3 */
-    height: 150px;
-}
-
-.size2{                     /* dimension image 5 et 6 */
-    height: 180px;
-}
-
-.firsthalf{                /* marge entre image 5 et 6 */
-    margin-bottom: 40px;
-}
-
-.fun{
-    background-size: cover;
-    background-position:center center;
-    width: 100%;
 }
 
 .funone{
@@ -489,6 +64,7 @@ input{
 .funtwo{
     background-image: url(Reservia/images/activites/small/paul-hermann.jpg);
     height: 170px;
+    background-position:center center;
 }
 
 .funthree{
@@ -504,7 +80,7 @@ input{
 .funfive{
     background-image: url(Reservia/images/activites/small/florian-wehde.jpg);
     height: 140px;
-    background-position-y: top;
+    background-position-y:25%;
 }
 
 .funsix{
@@ -512,16 +88,397 @@ input{
     height: 140px;
 }
 
-/* -------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-footer{                                                                                            /* PARAMETRE FOOTER */  
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    font-size: 20px;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* ------------------------------------------------------ PARAMETRE HEADER ---------------------------------------------------------------*/
+
+header.page{
+    height: 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+header.page h1{
+    width: 50%;
+}
+
+nav{
+    max-width: 450px;
+    width:40%;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li{
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+}
+
+nav ul li a{
+    display: block;
+    width:100%;
+    padding: 38px 0;
+}
+
+.login{
+    display: block;
+    width: 10%;
+    color: #0065FC;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul li:hover a{
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+    
+}
+
+/*--------------------------------------------------- PARAMETRE SECTION SEARCH --------------------------------------------------------------------*/
+
+#search {
+    width: 95%;
+    height: auto;
+    margin: auto;
+}
+
+.head_search{
+    padding-left:10px;
+}
+
+button, .filtre{
+    font-weight: bold;
+    font-size: 12px;
+    height: 40px;
+    outline: none;
+}
+
+form{
+    display: inline-flex;
+    margin: 20px 0;
+}
+
+.desktop , .nomad{
+    background-color: #0065FC;
+    color: #FFF;
+    border: none;
+}
+
+#search span::before{
+    display: inline-flex;
+    justify-content: center;
+    align-items:center;
+    width: 40px;
+    height: 40px;
+}
+
+.logo_position{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #F2F2F2;
+    color: black;
+}
+
+.desktop{
+    width: 100px;
+    text-align: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.nomad{
+    display: none;
+    width: 40px;
+    padding: 0;
+    position: relative;
+    right:20px;
+}
+
+.logo_recherche{
+    color: #FFF;
+}
+
+.box_filtre span::before , .result-form .logo_lettreI::before{
+    color: #0065FC;
+    background-color: #DEEBFF;
+    border-radius: 50px;
+}
+
+input{
+    border:1px solid #F2F2F2;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    padding: 0 0 0 10px;
+    height: 38px;
+    outline: none;
+}
+
+.container_filtre{
+    margin-left: 15px;
+}
+
+.container_filtre > p{
+    display: inline;
+    margin-right: 20px;    
+}
+
+.box_filtre , .result-form{
+    display: inline-flex;
+    align-items: center;
+}
+
+.filtre{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 38px;
+    line-height: 38px;
+    margin: 10px 10px;
+    padding: 0 25px;
+    border: 1px solid black;
+    border-left: none;
+    position: relative;
+    right:30px;
+    z-index: -10;
+}
+
+.box_filtre:hover .filtre{
+    animation: fillOn 0.5s forwards;
+}
+
+@keyframes fillOn{
+   
+    0%{clip-path:circle(0%)}
+    50%{clip-path: circle(50%); background-color: #DEEBFF;}
+    100%{clip-path: circle(100%); background-color: #0065FC; color: #FFF;}
+}
+
+.result-form{
+    margin:30px 0;
+}
+
+.result-form > p{
+    font-weight: 200;
+    margin: 10px 0 10px 10px;
+}
+
+/*==================================================== PARAMETRE SECTION HEBERGEMENT ============================================================== */
+
+.style-section{
+    background-color: #F2F2F2;
+    height: 700px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+#hebergement{
+    width: 69%;
+}   
+
+.head_host, .header_activity{
+    height: auto;
+    margin: 10px 0 0 20px
+}
+
+.container_card_host, .container_card_populaire{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container_card_host .card{
+    width: 30%;
+    height:210px;
+}
+
+.card{
+    background-color: #FFF;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(180, 177, 177, 0.808);
+    position: relative;
+}
+
+.all_card_host{
+    width: 100%;
+    height:110px; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.size_picture{
+    background-size: cover;
+    background-position: center center;
+}
+
+.name{
+    margin:10px 0 5px 10px;
+    font-size: 16px;
+}
+
+.price{
+    margin: 10px 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.star{
+    position: absolute;
+    bottom: 10px;
+    margin-left: 10px;
+}
+
+.more{
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+/*==================================================== PARAMETRE SECTION POPULAIRE ============================================================== */
+
+#populaire{
+    width: 26%;
+}
+
+.header_populaire{
+    width: 100%;
+    padding: 0 30px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_populaire span{
+    font-size: 20px;
+}
+
+.container_card_populaire{
+    width: 100%;
+    height: 85%;
+}
+
+.info{
+    width: 80%;
+}
+
+#populaire .card{
+    width: 85%;
+    height: 150px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.all_card_populaire{
+    margin: auto;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 40%;
+    height: 100%;
+}
+
+/*==================================================== PARAMETRE SECTION ACTIVITY ============================================================== */
+
+#activity{
+    width: 97%;
+    height: auto;
+}
+
+.header_activity{
+    width: 90%;
+    margin-left: 25px;
+}
+
+#activity .card{
+    background-color: #F2F2F2;
+    width: 21%;
+    margin: 0;
+    padding: 0;
+}
+
+.fun{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+}
+
+.container_card_activity{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.large{                    
+    height: 400px;
+}
+
+.size{                      
+    height: 210px;
+    margin-bottom: 40px;
+}
+
+.size1{                
+    height: 150px;
+}
+
+.size2{                    
+    height: 180px;
+}
+
+#activity h3{
+    font-size: 14px;
+    padding-left: 13px;
+    font-weight: bold;
+}
+
+.fa-star{
+    color: #0065FC;
+}
+
+.nostar{
+    color: #F2F2F2;
+}
+
+
+/*=============================================================== PARAMETRE FOOTER ===================================================================== */
+
+footer{                                                                                           
     width: 100%;
     height: auto;
-    padding-bottom: 20px;
+    margin-top: 25px;
     background-color: #F2F2F2;
     display: flex;
     justify-content: space-between;
-    margin-top: 60px;
 }
 
 footer div{
@@ -529,10 +486,10 @@ footer div{
     padding-left: 25px;
     display: flex;
     flex-direction: column;
+    padding-bottom: 25px;
 }
 
 footer p{
-    padding:15px 0;
     font-weight: 600;
 }
 
@@ -540,221 +497,181 @@ footer a{
     padding: 5px 0;
 }
 
+/*==================================================== PARAMETRAGE VERSION MOBILE  ====================================================================== */
+
 @media screen and (max-width:768px){
 
-            header.main{
-                width: 100%;
-                flex-wrap: wrap;
-                margin-bottom: 20px;
-            }
+    main{
+        display: initial;
+    }
 
-            h1{
-                width: 35%;
-                order: 1;
-            }
+/*================================================ PARAMETRE HEADER  [MOBILE] ========================================================== */
 
-            .login{
-                width: 35%;
-                text-align: right;
-                order:2;
-            }
+    header.page{
+        height: auto;
+        flex-wrap: wrap;
+        padding: 0;
+    }
 
-            nav{
-                width: 100%;
-                order: 3;
-            }
+    h1{
+        order: 1;
+        padding-left: 25px;
+        margin-bottom: 0;
+    }
 
-            
-            nav a{
-                font-size: 19px;
-                margin: auto;
-                padding-bottom: 15px;
-            }
+    .login{
+        margin-top: 20px;
+        text-align: center;
+        width: 35%;
+        order:2;
+    }
 
-            nav ul li a:hover{
-                border-top: none;
-                border-bottom:2px solid #0065FC;
-            }
+    nav{
+        padding: 0;
+        max-width: none;
+        width: 100%;
+        order: 3;
+    }
+    
+    nav ul li a{
+        width: 100%;
+        padding: 5px 0 15px 0;
+        border-bottom: 2px solid #F2F2F2;
+    }
 
-        
-            #search{                                                                /* Style de la section de recherche */
-                order: 1;
-                padding: 0 15px;
-            }
+    nav ul li a:hover{
+        border-top: none;
+        border-bottom:2px solid #0065FC;
+    }
 
-            .desktop{
-                display: none;
-            }
 
-            .nomad{
-                border-radius: 15px;
-                display: initial;
-            }
+    /*================================================ PARAMETRE SECTION HEBERGEMENT [MOBILE] ========================================================== */
 
-            .list_filtre{
-                display: flex;
-                flex-wrap: wrap;
-            }
-            
-            .list_filtre p{
-                display: block;
-                width: 100%;
-            }
-            
-        
-            form {
-                display: inline-flex;
-                width: 100%;
-            }
+    #search{                                                                
+        order: 1;
+    }
 
-            input{
-                min-width: 150px;
-                width: 80%;
-            }
-            
-            
-            #hebergement{                                                             /*----------- Style de la section hebergement ----------------------*/
-                background-color: #FFF;
-                order: 3;
-                width: 100%;
-                height: auto;
-            }
+    .desktop{
+        display: none;
+    }
 
-            h3{
-                font-size: 23px;
-            }
-            
-            .cadre{
-                width: 100%;
-                height: 100%;
-            }
+    .nomad{
+        border-radius: 15px;
+        display: initial;
+    }
 
-            .list-host{
-                width: 90%;
-            }
-        
-            .host{
-                width: 100%;
-                height: 200px;
-                max-width: none;
-            }
-            
-            .all_card_heb{
-                height:100px;
-            }
+    .container_filtre{
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-            
-            #popular{                                                 /*------------------ Style de la section plus populaire -------------------------*/
-                order: 2;
-                width: 100%; 
-                height: 700px;    
-                margin-bottom: 30px;
-            }
-            
-            .list-popular{
-                width: 90%;
-            }
-            
-            .mieux_note{
-                height: 180px;
-                width: 100%;
-            }
-            
+    .container_filtre > p{
+        display:block;
+        width: 100%;
+    }
 
-            #activity{                                              /*-------------------------- Style de la section activity --------------------------*/
-                order: 4;
-                height: auto;
-                width: 100%;
-                margin-top: 30px;
-            }
-            
-            .activity_location {
-                margin-left: 20px;
-            }
+    form {
+        display: inline-flex;
+        width: 100%;
+    }
 
-            .list-activity{
-                width: 90%;
-                height: auto;
-                margin: auto;
-            }
+    input{
+        min-width: 150px;
+        width: 80%;
+    }
+/*================================================ PARAMETRE SECTION HEBERGEMENT [MOBILE] ========================================================== */
 
-            .fun-card{
-                height: 200px;
-                width: 95%;
-                margin: 10px 5px;
-                box-shadow: 2px 2px 10px rgba(180, 177, 177, 0.808);
-            }
+    #hebergement{                                             
+        background-color: #FFF;
+        order: 3;
+        width: 100%;
+        height: auto;
+    }
 
-            .fun{
-                width: 100%;
-                height: 75%;
-            }
-            
+    #hebergement .card{
+        width: 90%;
+        height: 220px;
+    }
 
-            footer{                         /* -------------------------- Style du pied de page ----------------------------------------------- */
-                order: 5;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around; 
-                margin-top: 30px;
-            }
+/*================================================ PARAMETRE SECTION POPULAIRE [MOBILE] ========================================================== */
 
-            footer div{
-                width: 80%;
-            }
+    #populaire{                                                 
+        order: 2;
+        width: 100%;    
+    }
 
+    #populaire .card{
+        width: 90%;    
+        height: 150px;
+    }
+
+/*================================================ PARAMETRE SECTION ACTIVITY [MOBILE] ========================================================== */
+
+    #activity{                                              
+        background-color: #FFF;
+        order: 4;
+    }
+
+    .container_card_activity{
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+
+    #activity .card{
+        width: 95%;
+        height: 200px;
+        margin-top: 25px;
+    }
+
+    .fun{
+        width: 100%;
+        height: 75%;
+    }
+
+/*==================================================== PARAMETRE FOOTER [MOBILE ======================================================================== */
+
+    footer{                       
+        order: 5;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; 
+        margin-top: 30px;
+    }
+
+    footer div{
+        width: 80%;
+    }
 }
 
-@media screen and (min-width:769px) and (max-width:1024px){          /*-------------VERSION TABLETTE ---------------------------------------*/
+/*====================================================== PARAMETRAGE VERSION TABLETTE =============================================================== */
 
-        body{
+@media screen and (min-width:769px) and (max-width:1024px){      
+    
+        main{
+            width: 100%;
+            margin: auto;
             display: grid;
             grid-template-columns: 2% 35% 1% 60% 2% ;
-            grid-template-rows: 100px auto 20px auto 200px;
+            grid-template-rows: auto 25px auto ;
         }
 
-        header.main{                                               /*-------------  HEADER TABLETTE-----------------------------------------*/
-            grid-area: 1/2/2/5;
-            margin-bottom: 20px;
-        }
+/*================================================ PARAMETRE SECTION SEARCH [TABLETTE] ========================================================== */
 
-        h1{
-            width: 50%;
-            order: 1;
+        #search{                                                    
+            grid-area: 1/2/2/3;
+            margin: 50px 0;
         }
-
-        .login{
-            order:3;
-        }
-
-        nav{
-            width: 40%;
-            order: 2;
-        }
-
-        nav a{
-            padding-top: 35px;
-        }
-
-        #search{                                                    /******************** SEARCH TABLETTE --------------------------------*/
-            grid-area: 2/2/3/3;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            order: 1;
-            margin-top: 10px;
-        }
-
-        .list_filtre p{
+        
+        .container_filtre p{
             display: block;
             width: 100%;
-            margin-bottom: 20px;
         }
 
         input{
-            width: 130px;
-            font-size: 11px;
+            width: 160px;
+            font-size: 12px;
         }
 
         .desktop{
@@ -765,87 +682,57 @@ footer a{
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
             display: initial;
-            top: 1px;
         }
 
+/*================================================ PARAMETRE SECTION HEBERGEMENT [TABLETTE] ========================================================== */
 
-        #hebergement{                                                       /*------- HEBERGEMENT TABLETTE -----------------------------------------------*/
-            width: 100%;
-            grid-area: 2/4/3/5;
-        }
-
-        .cadre{
+        #hebergement{                                                       
             width: 100%;
             height: 100%;
+            grid-area: 1/4/2/5;
         }
 
-        .list-host{
-            font-size: 14px;
-            height: 100%;
-        }
-
-        .host{
-            width: 42%;
-            height: 190px;
+        #hebergement .card{
+            width: 45%;
+            height: 200px;
             margin: 15px auto;
-        }
-
-        .all_card_heb{
-            height: 80px;
         }
 
         .more{
             margin-left: 20px;
         }
 
-        #popular{                       /* ------------------------ SECTION POPULAIRE TABLETTE --------------------------------------------------------*/
+/*================================================ PARAMETRE SECTION POPULAIRE [TABLETTE] ========================================================== */
+
+        #populaire{                      
             width: 100%;
             height: 100%;
-            grid-area: 4/2/5/3;
+            grid-area: 3/2/4/3;
         }
 
-        .list-popular{
+/*================================================ PARAMETRE SECTION ACTIVITY [TABLETTE] ========================================================== */
+
+        #activity{           
             width: 100%;
-            justify-content: space-around;
-        }
-
-        #popular .cadre{
             height: 100%;
-        }
-
-        .mieux_note{
-            width: 90%;
-
-        }
-
-        #activity{              /* ---------------------------------SECTION ACTIVITY TABLETTE -------------------------------------------------------*/
-            width: 100%;
+            border-radius: 20px;
             background-color: #F2F2F2;
-            grid-area: 4/4/5/5;
+            grid-area: 3/4/4/5;
+            align-content: flex-start;
         }
 
-        .activity_location{
-            padding: 5px 0 5px 15px;
-        }
-
-        .list-activity{
-            height: auto;
+        .container_card_activity{
             flex-direction: row;
-            margin-bottom: 25px;
+            height: auto;
         }
 
-        .fun-card{
-            width: 42%;
-            height: auto;
-            margin: 15px auto;
+        #activity .card{
+            width: 45%;
+            height: 200px;
+            margin: 10px auto;    
         }
 
         .fun{
-            height: 150px;
+            height: 160px;
         }
-
-        footer{
-            grid-area: 5/1/6/6;
-        }
-
-}
+    }
