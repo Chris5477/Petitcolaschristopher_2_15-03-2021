@@ -15,16 +15,16 @@
 
     <body>
 
-        <header class="page">
+        <header class="header-page">
                 
                 <h1><img src="Reservia/images/logo/Reservia.svg" alt="Logo de 'l'entreprise"/></h1>
                 
-                <nav>
-                    <ul>
-                        <li><a href="#hebergement">Hébergements</a></li>
-                        <li><a href="#activity">Activités</a></li>
+                <nav class="menu">
+                    <ul class="ul-menu">
+                        <li class="menu-list"><a class="lien-menu" href="#hebergement">Hébergements</a></li>
+                        <li class="menu-list"><a class="lien-menu" href="#activity">Activités</a></li>
                     </ul>
-                </nav>
+                </nav> 
                 
                 <a class="login" href="#">S'inscrire</a>
                 
@@ -41,9 +41,9 @@
 
                 </header>
 
-                <form method="POST" action="#">
+                <form class="form-search" method="POST" action="#">
                     
-                    <span class="fas fa-map-marker-alt logo_position"></span><input type="text" placeholder="Marseille , France"/>
+                    <span class="fas fa-map-marker-alt logo_position"></span><input class="input-search" type="text" placeholder="Marseille , France"/>
                     <button class="desktop" type="submit">Rechercher</button>
                     <button class="nomad" type="submit"><span class="fas fa-search logo_recherche"></span></button>
                     
@@ -52,20 +52,20 @@
                 
                 <div class="container_filtre">
                     
-                    <p>Filtres</p>  
+                    <p class="title-filtre">Filtres</p>  
                     
-                    <div class="box_filtre"><span class="fas fa-money-bill-wave filtre_icon"></span><div class="filtre">Economique</div></div>
-                    <div class="box_filtre"><span class="fas fa-child filtre_icon"></span><div class="filtre">Familial</div></div>
-                    <div class="box_filtre"><span class="fas fa-heart filtre_icon"></span><div class="filtre">Romantique</div></div>
-                    <div class="box_filtre"><span class="fas fa-dog filtre_icon"></span><div class="filtre animal">Animaux autorisés</div></div>
+                    <div class="box_filtre"><span class="fas fa-money-bill-wave icon-param filtre_icon"></span><div class="filtre">Economique</div></div>
+                    <div class="box_filtre"><span class="fas fa-child icon-param filtre_icon"></span><div class="filtre">Familial</div></div>
+                    <div class="box_filtre"><span class="fas fa-heart icon-param filtre_icon"></span><div class="filtre">Romantique</div></div>
+                    <div class="box_filtre"><span class="fas fa-dog icon-param filtre_icon"></span><div class="filtre animal">Animaux autorisés</div></div>
                     
                 </div>
                 
                 <div class="result-form">
                     
-                    <span class="fas fa-info logo_lettreI"></span>
+                    <span class="fas fa-info icon-param logo-info"></span>
                     
-                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                    <p class="result-search">Plus de 500 logements sont disponibles dans cette ville</p>
                     
                 </div>
                 
@@ -75,7 +75,7 @@
                     
                 <header class="head_host">
 
-                    <h2>Hébergements à Marseille</h2>
+                    <h2 class="sub-title">Hébergements à Marseille</h2>
                             
                 </header>
                         
@@ -257,7 +257,7 @@
 
                 <header class="header_populaire">
                             
-                    <h2>Les plus populaire</h2>
+                    <h2 class="sub-title">Les plus populaire</h2>
                     <span class="fas fa-chart-line"></span>
                 
                 </header>
@@ -342,7 +342,7 @@
 
                 <header class="header_activity">
 
-                    <h2>Activités à Marseille</h2>
+                    <h2 class="sub-title">Activités à Marseille</h2>
 
                 </header>
                 
@@ -420,9 +420,9 @@
             
         </main>
 
-        <footer>
+        <footer class="footer-page">
             
-            <div>
+            <div class="section-footer">
 
                 <p class="title">A propos</p>
                 <a href="#">Fonctionnement du site</a>
@@ -431,7 +431,7 @@
 
             </div>
 
-            <div>
+            <div class="section-footer">
 
                 <p class="title">Nos hébergements</p>
                 <a href="#">Chartes qualité</a>
@@ -439,7 +439,7 @@
 
             </div>
 
-            <div>
+            <div class="section-footer">
 
                 <p class="title">Assistance</p>
                 <a href="#">Centre d'aide</a>
